@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_settings.*
 class SettingsActivity : BaseSettingsActivity() {
 
     override val settingsActivityComponent by lazy { ComponentName(this, "$packageName.LauncherSettingsActivity") }
-    override val wallpaperServiceComponent by lazy { ComponentName(this, ExampleWallpaperService::class.java) }
+    override val wallpaperServiceComponent by lazy { ComponentName(this, ExampleWallpaperService::class.java) } //TODO return your BaseWallpaperService implementation here
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +18,8 @@ class SettingsActivity : BaseSettingsActivity() {
 
     override fun onResume() {
         super.onResume()
+
+        //TODO handle your settings here
 
         blue.setOnClickListener {
             blue.isSelected = true

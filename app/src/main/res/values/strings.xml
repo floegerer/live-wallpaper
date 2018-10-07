@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- TODO replace app name -->
     <string name="app_name">Live Wallpaper Template</string>
     <string name="show_hide_app_icon">Show/Hide App Icon</string>
     <string name="set_wallpaper">Set Wallpaper</string>

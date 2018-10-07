@@ -5,6 +5,6 @@ import com.raybritton.template.WallpaperRenderer
 
 class ExampleWallpaperService : BaseWallpaperService() {
     override fun createWallpaperRenderer(): WallpaperRenderer {
-        return ExampleWallpaperDrawer(applicationContext)
+        return ExampleWallpaperDrawer(applicationContext) //TODO return your WallpaperRenderer implementation here
     }
 }

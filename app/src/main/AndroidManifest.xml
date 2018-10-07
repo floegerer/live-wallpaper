@@ -7,6 +7,7 @@
         android:name="android.software.live_wallpaper"
         android:required="true" />
 
+    <!-- TODO replace app icon -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

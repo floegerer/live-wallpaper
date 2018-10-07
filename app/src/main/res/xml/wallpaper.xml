@@ -5,3 +5,6 @@
     android:description="@string/app_name"
     android:settingsActivity="com.raybritton.liveWallpaper.SettingsActivity"
     />
+
+<!-- TODO settingsActivity must be manually updated to match your setting activity FQCN -->
+<!-- TODO replace wallpaper thumbnail with one relevant for your wallpaper -->

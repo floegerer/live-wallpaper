@@ -63,7 +63,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_live_wallpaper">
 
-        <!-- Replace the controls here -->
+        <!-- TODO Replace the controls here -->
 
         <com.raybritton.template.views.SmartToggleButton
             android:id="@+id/blue"

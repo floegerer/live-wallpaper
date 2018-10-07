@@ -39,6 +39,7 @@ class ExampleWallpaperDrawer(val context: Context) : WallpaperRenderer {
     }
 
     override fun draw(canvas: Canvas) {
+        //TODO Replace with your drawing code
         yPos += increment
         if (yPos > (height - paint.textSize)) {
             increment = -5

@@ -25,6 +25,8 @@ This is preview of the wallpaper used by wallpaper listing apps
 * `release.jks`, `release.properties`, `strings.xml`, `ic_launcher*`, `build.gradle`, and the package name
 These are the usual Android files and should be updated to match your app
 
+### There are TODOs in the app for all these steps
+
 ## Template files
 
 The files in the `template` package probably don't need to be edited and are mostly used to provided the drawer to the settings activity and the launcher. 

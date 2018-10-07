@@ -10,7 +10,9 @@ import android.view.SurfaceHolder
  *
  * A handler is triggered at most every 8 ms to redraw the wallpaper
  */
-abstract class BaseWallpaperService(private val createWallpaperRenderer: () -> WallpaperRenderer) : WallpaperService() {
+abstract class BaseWallpaperService : WallpaperService() {
+
+    abstract fun createWallpaperRenderer(): WallpaperRenderer
 
     override fun onCreateEngine(): WallpaperService.Engine {
         return WallpaperEngine()

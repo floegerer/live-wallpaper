@@ -19,6 +19,8 @@ import java.util.ArrayList
  * They are essentially radio buttons but without a fixed appearance or layout requirement
  *
  * The group attribute allows for multiple groups of this button to be in a ViewGroup but not effect each other
+ *
+ * In normal usage you should call setSelected(true) from the onClickListener
  */
 class SmartToggleButton @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : Button(context, attrs, defStyleAttr) {
     private val otherButtons = ArrayList<SmartToggleButton>()

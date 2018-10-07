@@ -9,12 +9,21 @@ import android.view.View
  * This allows the settings activity to show a preview of the wallpaper to the user
  */
 class WallpaperDemoView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View(context, attrs, defStyleAttr), Runnable {
-    val renderer: WallpaperRenderer? = null
+    var renderer: WallpaperRenderer? = null
+        set(value) {
+            field = value
+            post { renderer!!.setCanvasSize(width, height) }
+            post(this)
+        }
+
+    var posted = false
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        post { renderer!!.setCanvasSize(width, height) }
-        post(this)
+        if (!posted && renderer != null) {
+            post { renderer!!.setCanvasSize(width, height) }
+            post(this)
+        }
     }
 
     override fun onDetachedFromWindow() {
@@ -28,6 +37,7 @@ class WallpaperDemoView @JvmOverloads constructor(context: Context, attrs: Attri
     }
 
     override fun run() {
+        posted = true
         postInvalidate()
         postDelayed(this, 15)
     }

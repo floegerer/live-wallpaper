@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <com.raybritton.template.WallpaperDemoView
+        android:id="@+id/settings_live_wallpaper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/settings_prefs_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settings_set_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/set_wallpaper_button"
+        android:visibility="gone"
+        android:elevation="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/set_wallpaper"
+        app:layout_constraintRight_toRightOf="@id/settings_live_wallpaper"
+        app:layout_constraintTop_toTopOf="@id/settings_live_wallpaper" />
+
+    <FrameLayout
+        android:background="@drawable/switch_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/settings_live_wallpaper"
+        app:layout_constraintRight_toRightOf="@id/settings_live_wallpaper">
+
+        <Switch
+            android:id="@+id/settings_show_app_icon"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/settings_horz_padding"
+            android:paddingRight="@dimen/settings_horz_padding"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:switchPadding="8dp"
+            android:text="@string/show_hide_app_icon" />
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/settings_prefs_container"
+        android:background="@color/settings_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/settings_horz_padding"
+        android:paddingRight="@dimen/settings_horz_padding"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_live_wallpaper">
+
+        <!-- Replace the controls here -->
+
+        <com.raybritton.template.views.SmartToggleButton
+            android:id="@+id/blue"
+            android:text="Blue"
+            app:layout_constraintEnd_toStartOf="@+id/red"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/ToggleBarButton" />
+
+        <com.raybritton.template.views.SmartToggleButton
+            android:id="@+id/red"
+            android:text="Red"
+            app:layout_constraintStart_toEndOf="@+id/blue"
+            app:layout_constraintEnd_toStartOf="@+id/green"
+            style="@style/ToggleBarButton" />
+
+        <com.raybritton.template.views.SmartToggleButton
+            android:id="@+id/green"
+            android:text="Green"
+            app:layout_constraintStart_toEndOf="@+id/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/ToggleBarButton" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

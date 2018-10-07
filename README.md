@@ -1,12 +1,11 @@
 # Live Wallpaper Template
-### (Canvas)
 
-Use this template to help create live wallpaper for Android.
+Use this template to help create live wallpapers for Android.
 Note this for live wallpapers that use the `Canvas` and not OpenGL.
 
 Using the canvas limits your wallpaper to about 30 FPS
 
-##Files you need to edit
+## Files you need to edit
 
 * `ExampleWallpaperDrawer`
 This is the class that draws the wallpaper
@@ -26,7 +25,7 @@ This is preview of the wallpaper used by wallpaper listing apps
 * `release.jks`, `release.properties`, `strings.xml`, `ic_launcher*`, `build.gradle`, and the package name
 These are the usual Android files and should be updated to match your app
 
-##Template files
+## Template files
 
 The files in the `template` package probably don't need to be edited and are mostly used to provided the drawer to the settings activity and the launcher. 
 They have javadoc explaining their purpose in more detail in each file. 

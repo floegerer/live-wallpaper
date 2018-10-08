@@ -3,8 +3,6 @@
 Use this template to help create live wallpapers for Android.
 Note this for live wallpapers that use the `Canvas` and not OpenGL.
 
-Using the canvas limits your wallpaper to about 30 FPS
-
 ## Files you need to edit
 
 * `ExampleWallpaperDrawer`

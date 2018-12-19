@@ -1,7 +1,7 @@
 # Live Wallpaper Template
 
 Use this template to help create live wallpapers for Android.
-Note this is for live wallpapers that use the `Canvas` and not OpenGL.
+Note this is for live wallpapers that use the [`Canvas`](https://developer.android.com/reference/android/graphics/Canvas) and not OpenGL.
 
 ## Files you need to edit
 
